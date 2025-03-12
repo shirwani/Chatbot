@@ -1,0 +1,57 @@
+body {
+    font-size:          13px;
+}
+
+.bot_response {
+    border-radius:      5px;
+    background-color:   #dddddd;
+    border:             none;
+    padding:            2px;
+}
+
+.user_query {
+    display:            flex;
+    justify-content:    flex-end;
+    padding:            2px;
+    border-radius:      5px;
+    background-color:   #dddddd;
+    border:             none;
+}
+
+.box {
+    display:            flex;
+    justify-content:    right;
+    align-items:        center;
+    padding:            15px;
+    height:             100%;
+    max-width:          80%;
+    border-radius:      5px;
+    background-color:   #dddddd;
+    word-wrap:          break-word;
+    border:             none;
+    font-style:         italic;
+}
+
+.chat_log {
+    background-color:   #dddddd;
+    border-radius:      5px;
+}
+
+#user_message {
+    padding:            10px;
+    width:              50%;
+    border-radius:      5px;
+    border:             none;
+    font-style:         italic;
+}
+
+textarea {
+    width:          100%;   /* Full width */
+    min-height:     40px;   /* Minimum height */
+    max-width:      80%;    /* Limits width */
+    padding:        10px;
+    border:         1px solid #ccc;
+    border-radius:  5px;
+    overflow:       hidden; /* Hide scrollbar */
+    resize:         none;   /* Disable manual resizing */
+}

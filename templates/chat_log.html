@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+    {% if not chat_log %}
+        <div class="alert alert-info alert-dismissible fade in">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong><em>Type your message in the textbox below, then click Send.</em></strong>
+        </div>
+    {% else %}
+        <div class="panel-group">
+        {% for item in chat_log %}
+            {% if loop.index is odd %}
+                <div class="panel panel-default user_query">
+                    <div class="box">{{ item.content.replace('\n', '<br/>') | safe }}</div>
+                </div>
+            {% else %}
+                <div class="panel panel-default bot_response">
+                    <div class="panel-body">{{ item.content.replace('\n', '<br/>') | safe }}</div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+    {% endif %}
